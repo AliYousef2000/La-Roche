@@ -110,7 +110,7 @@ Public Class cash
                     invoice.Label21.Text = dr.Item(6)
                     invoice.Label22.Text = dr.Item(7)
                     invoice.Label23.Text = dr.Item(8) & " $"
-                    invoice.Label28.Text = "(" & dr.Item(11) & " / night --without discount )"
+
                     invoice.Label29.Text = dr.Item(13) & " $"
                     invoice.Label30.Text = dr.Item(12) & " $"
                     invoice.Label24.Text = dr.Item(9) & " $"

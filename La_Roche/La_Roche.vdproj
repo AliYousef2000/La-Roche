@@ -27,7 +27,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_DD409B0BC215476388814D6AD101472D"
+        "MsmKey" = "8:_CC0E23B09FE526C455F8E787C073A288"
+        "OwnerKey" = "8:_5753606A874E4552B199B46F0EC38CC4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_DCFDA03DD56FE8E12613477E30311A08"
+        "OwnerKey" = "8:_5753606A874E4552B199B46F0EC38CC4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F41BA44812DD48FC95C285358715AD2D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -35,6 +47,18 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_5753606A874E4552B199B46F0EC38CC4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_CC0E23B09FE526C455F8E787C073A288"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_DCFDA03DD56FE8E12613477E30311A08"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -169,9 +193,71 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DD409B0BC215476388814D6AD101472D"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CC0E23B09FE526C455F8E787C073A288"
             {
-            "SourcePath" = "8:..\\..\\..\\..\\Downloads\\hotel_finder_21775.ico"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_CC0E23B09FE526C455F8E787C073A288"
+                    {
+                    "Name" = "8:Microsoft.VisualBasic.PowerPacks.Vs.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Microsoft.VisualBasic.PowerPacks.Vs.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_85D16055A48C4E059C259BE091F7A81D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_DCFDA03DD56FE8E12613477E30311A08"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_DCFDA03DD56FE8E12613477E30311A08"
+                    {
+                    "Name" = "8:FontAwesome.Sharp.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:FontAwesome.Sharp.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_85D16055A48C4E059C259BE091F7A81D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F41BA44812DD48FC95C285358715AD2D"
+            {
+            "SourcePath" = "8:..\\hotel_finder_21775.ico"
             "TargetName" = "8:hotel_finder_21775.ico"
             "Tag" = "8:"
             "Folder" = "8:_85D16055A48C4E059C259BE091F7A81D"
@@ -377,9 +463,9 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_0FC61B30CB1845D3B2D42E2389A2BDC4"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_1BB284ADB44046B1AA1ABA139B3EAD96"
             {
-            "Name" = "8:LA ROCHE"
+            "Name" = "8:Shortcut to Primary output from pro1 (Active) (2)"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -388,12 +474,12 @@
             "Target" = "8:_5753606A874E4552B199B46F0EC38CC4"
             "Folder" = "8:_3DEED5C9E60544E08A1B37FB9AEF73BD"
             "WorkingFolder" = "8:_85D16055A48C4E059C259BE091F7A81D"
-            "Icon" = "8:_DD409B0BC215476388814D6AD101472D"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_10D03575C7C841D49D38674433E0F342"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D864666659704375802E953FAA0CBA98"
             {
-            "Name" = "8:LA ROCHE"
+            "Name" = "8:Shortcut to Primary output from pro1 (Active)"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -402,7 +488,7 @@
             "Target" = "8:_5753606A874E4552B199B46F0EC38CC4"
             "Folder" = "8:_F8CB5F393E7B42998C890937E0F8B7A7"
             "WorkingFolder" = "8:_85D16055A48C4E059C259BE091F7A81D"
-            "Icon" = "8:_DD409B0BC215476388814D6AD101472D"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_FFFA2F98AC424A64AFF54FAB5A23752A"

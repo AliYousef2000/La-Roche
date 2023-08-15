@@ -50,6 +50,7 @@ Public Class order
         End If
     End Sub
     Public Sub populateordercb()
+        ComboBox1.Items.Clear()
         Dim con As New SqlConnection(Module1.str)
 
         Dim com2 As New SqlCommand("DECLARE @a AS date = CONVERT(date, GETDATE())

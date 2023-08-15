@@ -1,11 +1,13 @@
 ﻿Imports System.Data.SqlClient
 Public Class reservation
+    Dim perapp As String
     Private Sub reservation_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DataGridView2.RowTemplate.Height = 35
         Populateblcb()
         ComboBox4.SelectedIndex = 0
         DateTimePicker1.Value = Date.Today
         DateTimePicker2.Value = Date.Today.AddDays(1)
+        TextBox9.Text = 0
         populatecrdg()
         calcprice()
     End Sub
@@ -17,7 +19,7 @@ Public Class reservation
                 Dim cell As DataGridViewRow = DataGridView2.CurrentRow
                 Form2.res_id = cell.Cells(0).Value
                 Dim con As New SqlConnection(Module1.str)
-                Dim com As New SqlCommand(" select reservation_id,app_id,fname,lastname,checkin_date,checkout_date,phone,invoice.price,invoice.afterprice,invoice.deposite,invoice.adds_on,block_id from reservation inner join invoice on reservation.reservation_id = invoice.rid where reservation_id=@a ", con)
+                Dim com As New SqlCommand(" select reservation_id,app_id,fname,lastname,checkin_date,checkout_date,phone,invoice.price,invoice.afterprice,invoice.deposite,invoice.adds_on,block_id,elec_in,elec_out from reservation inner join invoice on reservation.reservation_id = invoice.rid where reservation_id=@a ", con)
                 com.Parameters.Add("@a", SqlDbType.Int).Value = CInt(Form2.res_id)
                 con.Open()
                 Dim dr As SqlDataReader = com.ExecuteReader()
@@ -33,6 +35,8 @@ Public Class reservation
                     ComboBox3.SelectedIndex = 0
                     TextBox2.Text = dr.Item(10)
                     TextBox7.Text = dr.Item(7)
+                    TextBox8.Text = dr.Item(12)
+                    TextBox9.Text = dr.Item(13)
                     TextBox18.Text = dr.Item(8)
                     TextBox20.Text = dr.Item(9)
                     Form2.appname = CStr(dr.Item(1))
@@ -113,12 +117,13 @@ Public Class reservation
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
         Try
             If (Form2.count = 0) Then
-                If ((ComboBox3.SelectedIndex = -1) Or (TextBox3.Text.Trim = "") Or (TextBox4.Text.Trim = "") Or (TextBox5.Text.Trim = "") Or (TextBox20.Text.Trim = "")) Then
+                If ((ComboBox3.SelectedIndex = -1) Or (TextBox3.Text.Trim = "") Or (TextBox4.Text.Trim = "") Or (TextBox5.Text.Trim = "") Or (TextBox20.Text.Trim = "") Or (TextBox8.Text.Trim = "") Or (TextBox9.Text.Trim = "")) Then
                     MsgBox("Enter Empty Fields")
                 Else
                     Dim con As New SqlConnection(Module1.str)
                     Dim ri As Integer
 
+                    TextBox9.Text = 0
 
                     Dim com As New SqlCommand("insert into reservation(app_id,block_id,fname,lastname,phone,checkin_date,checkout_date) values(@a,@k,@b,@c,@d,@e,@f)", con)
                     com.Parameters.Add("@a", SqlDbType.VarChar).Value = ComboBox3.SelectedItem
@@ -145,20 +150,22 @@ Public Class reservation
 
 
                     If (TextBox18.Text.Trim = "") Then
-                        Dim com8 As New SqlCommand("insert into invoice(rid,price,afterprice,deposite,adds_on) values(@m,@p,@x,@y,0)", con)
+                        Dim com8 As New SqlCommand("insert into invoice(rid,price,afterprice,deposite,adds_on,elec_in,elec_out) values(@m,@p,@x,@y,0,@l,0)", con)
                         com8.Parameters.Add("@m", SqlDbType.Int).Value = CInt(ri)
                         com8.Parameters.Add("@p", SqlDbType.Decimal).Value = CDec(TextBox7.Text.Trim)
                         com8.Parameters.Add("@x", SqlDbType.Decimal).Value = CDec(TextBox7.Text.Trim)
                         com8.Parameters.Add("@y", SqlDbType.Decimal).Value = CDec(TextBox20.Text.Trim)
+                        com8.Parameters.Add("@l", SqlDbType.Int).Value = CInt(TextBox8.Text.Trim)
                         con.Open()
                         com8.ExecuteNonQuery()
                         con.Close()
                     Else
-                        Dim com2 As New SqlCommand("insert into invoice(rid,price,afterprice,deposite,adds_on) values(@m,@p,@x,@y,0)", con)
+                        Dim com2 As New SqlCommand("insert into invoice(rid,price,afterprice,deposite,adds_on,elec_in,elec_out) values(@m,@p,@x,@y,0,@l,0)", con)
                         com2.Parameters.Add("@m", SqlDbType.Int).Value = CInt(ri)
                         com2.Parameters.Add("@p", SqlDbType.Decimal).Value = CDec(TextBox7.Text.Trim)
                         com2.Parameters.Add("@x", SqlDbType.Decimal).Value = CDec(TextBox18.Text.Trim)
                         com2.Parameters.Add("@y", SqlDbType.Decimal).Value = CDec(TextBox20.Text.Trim)
+                        com2.Parameters.Add("@l", SqlDbType.Int).Value = CInt(TextBox8.Text.Trim)
                         con.Open()
                         com2.ExecuteNonQuery()
                         con.Close()
@@ -168,12 +175,12 @@ Public Class reservation
                     reset_re()
                 End If
             Else
-                If ((ComboBox3.SelectedIndex = -1) Or (TextBox3.Text.Trim = "") Or (TextBox4.Text.Trim = "") Or (TextBox5.Text.Trim = "") Or (TextBox7.Text.Trim = "") Or (TextBox18.Text.Trim = "") Or (TextBox20.Text.Trim = "")) Then
-                    MsgBox("Enter Empty Fields lolo")
+                If ((ComboBox3.SelectedIndex = -1) Or (TextBox3.Text.Trim = "") Or (TextBox4.Text.Trim = "") Or (TextBox5.Text.Trim = "") Or (TextBox7.Text.Trim = "") Or (TextBox18.Text.Trim = "") Or (TextBox20.Text.Trim = "") Or (TextBox8.Text.Trim = "") Or (TextBox9.Text.Trim = "")) Then
+                    MsgBox("Enter Empty Fields ")
                 Else
                     Dim con As New SqlConnection(Module1.str)
                     Dim com2 As New SqlCommand("update reservation set app_id =@a ,block_id = @k ,fname = @b ,lastname =@c ,phone =@d,checkin_date                                      =@e ,checkout_date =@f where reservation_id=@w;
-                                                update invoice set price =@p ,afterprice =@x ,deposite =@y, adds_on=@q where rid=@w ", con)
+                                                update invoice set price =@p ,afterprice =@x ,deposite =@y, adds_on=@q , elec_in=@g ,elec_out=@l  where rid=@w ", con)
                     com2.Parameters.Add("@a", SqlDbType.VarChar).Value = ComboBox3.SelectedItem
                     com2.Parameters.Add("@k", SqlDbType.VarChar).Value = ComboBox4.SelectedItem
                     com2.Parameters.Add("@b", SqlDbType.VarChar).Value = TextBox3.Text.Trim
@@ -185,6 +192,8 @@ Public Class reservation
                     com2.Parameters.Add("@x", SqlDbType.Decimal).Value = CDec(TextBox18.Text.Trim)
                     com2.Parameters.Add("@y", SqlDbType.Decimal).Value = CDec(TextBox20.Text.Trim)
                     com2.Parameters.Add("@q", SqlDbType.Decimal).Value = CDec(TextBox2.Text.Trim)
+                    com2.Parameters.Add("@g", SqlDbType.Int).Value = CInt(TextBox8.Text.Trim)
+                    com2.Parameters.Add("@l", SqlDbType.Int).Value = CInt(TextBox9.Text.Trim)
                     com2.Parameters.Add("@w", SqlDbType.Int).Value = CInt(Form2.res_id)
                     con.Open()
                     com2.ExecuteNonQuery()
@@ -211,9 +220,17 @@ Public Class reservation
     End Sub
 
     Private Sub ComboBox4_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox4.SelectedIndexChanged
-        ComboBox3.Items.Clear()
-        populaterecb()
-        calcprice()
+        If Form2.count = 1 Then
+            perapp = Form2.appname
+            ComboBox3.Items.Clear()
+            populaterecb()
+            ComboBox3.Items.Add(perapp)
+            calcprice()
+        Else
+            ComboBox3.Items.Clear()
+            populaterecb()
+            calcprice()
+        End If
     End Sub
 
     Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
@@ -308,5 +325,6 @@ Public Class reservation
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+
 
 End Class

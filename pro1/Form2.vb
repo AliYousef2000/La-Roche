@@ -87,7 +87,9 @@ Public Class Form2
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
-        Form2_Load(e, e)
+        ' Perform any cleanup or saving operations if needed
+        ' Then restart the application
+        Application.Restart()
     End Sub
 
     Private Sub Button24_Click(sender As Object, e As EventArgs) Handles Button24.Click

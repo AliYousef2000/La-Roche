@@ -185,7 +185,7 @@ Public Class apartment
         Try
 
             Dim con As New SqlConnection(Module1.str)
-            Dim com As New SqlCommand(" select sum(afterprice + orders) from reservation inner join invoice on reservation.id = invoice.rid where (checkin_date >= @b) and (checkin_date <= @c)", con)
+            Dim com As New SqlCommand(" select sum(afterprice + adds_on) from reservation inner join invoice on reservation.reservation_id = invoice.rid where (checkin_date >= @b) and (checkin_date <= @c)", con)
             com.Parameters.Add("@b", SqlDbType.Date).Value = DateTimePicker4.Value
             com.Parameters.Add("@c", SqlDbType.Date).Value = DateTimePicker5.Value
             con.Open()

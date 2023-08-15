@@ -63,6 +63,10 @@ Partial Class reservation
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.rebox.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
@@ -233,6 +237,10 @@ Partial Class reservation
         'GroupBox3
         '
         Me.GroupBox3.BackColor = System.Drawing.Color.LightGray
+        Me.GroupBox3.Controls.Add(Me.TextBox9)
+        Me.GroupBox3.Controls.Add(Me.TextBox8)
+        Me.GroupBox3.Controls.Add(Me.Label4)
+        Me.GroupBox3.Controls.Add(Me.Label3)
         Me.GroupBox3.Controls.Add(Me.TextBox2)
         Me.GroupBox3.Controls.Add(Me.Label1)
         Me.GroupBox3.Controls.Add(Me.TextBox20)
@@ -265,7 +273,7 @@ Partial Class reservation
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(462, 136)
+        Me.TextBox2.Location = New System.Drawing.Point(462, 119)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(100, 20)
         Me.TextBox2.TabIndex = 24
@@ -273,7 +281,7 @@ Partial Class reservation
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(350, 136)
+        Me.Label1.Location = New System.Drawing.Point(350, 122)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(44, 13)
         Me.Label1.TabIndex = 23
@@ -281,7 +289,7 @@ Partial Class reservation
         '
         'TextBox20
         '
-        Me.TextBox20.Location = New System.Drawing.Point(462, 102)
+        Me.TextBox20.Location = New System.Drawing.Point(462, 84)
         Me.TextBox20.Name = "TextBox20"
         Me.TextBox20.Size = New System.Drawing.Size(100, 20)
         Me.TextBox20.TabIndex = 22
@@ -289,7 +297,7 @@ Partial Class reservation
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(350, 105)
+        Me.Label24.Location = New System.Drawing.Point(350, 87)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(55, 13)
         Me.Label24.TabIndex = 21
@@ -297,7 +305,7 @@ Partial Class reservation
         '
         'TextBox18
         '
-        Me.TextBox18.Location = New System.Drawing.Point(462, 73)
+        Me.TextBox18.Location = New System.Drawing.Point(462, 51)
         Me.TextBox18.Name = "TextBox18"
         Me.TextBox18.Size = New System.Drawing.Size(100, 20)
         Me.TextBox18.TabIndex = 19
@@ -305,7 +313,7 @@ Partial Class reservation
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(350, 80)
+        Me.Label23.Location = New System.Drawing.Point(350, 54)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(80, 13)
         Me.Label23.TabIndex = 20
@@ -314,7 +322,7 @@ Partial Class reservation
         'TextBox7
         '
         Me.TextBox7.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.TextBox7.Location = New System.Drawing.Point(462, 44)
+        Me.TextBox7.Location = New System.Drawing.Point(462, 13)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.ReadOnly = True
         Me.TextBox7.Size = New System.Drawing.Size(100, 20)
@@ -324,7 +332,7 @@ Partial Class reservation
         '
         Me.Label33.AutoSize = True
         Me.Label33.BackColor = System.Drawing.Color.Transparent
-        Me.Label33.Location = New System.Drawing.Point(350, 47)
+        Me.Label33.Location = New System.Drawing.Point(350, 16)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(40, 13)
         Me.Label33.TabIndex = 18
@@ -333,7 +341,7 @@ Partial Class reservation
         'Button11
         '
         Me.Button11.BackColor = System.Drawing.Color.Lime
-        Me.Button11.Location = New System.Drawing.Point(318, 249)
+        Me.Button11.Location = New System.Drawing.Point(666, 249)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(91, 39)
         Me.Button11.TabIndex = 15
@@ -343,7 +351,7 @@ Partial Class reservation
         'Button10
         '
         Me.Button10.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button10.Location = New System.Drawing.Point(221, 249)
+        Me.Button10.Location = New System.Drawing.Point(569, 249)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(91, 39)
         Me.Button10.TabIndex = 14
@@ -369,14 +377,14 @@ Partial Class reservation
         '
         'DateTimePicker2
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(115, 202)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(115, 186)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker2.TabIndex = 11
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(115, 161)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(115, 154)
         Me.DateTimePicker1.MinDate = New Date(2023, 6, 2, 0, 0, 0, 0)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
@@ -386,7 +394,7 @@ Partial Class reservation
         '
         Me.ComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(462, 12)
+        Me.ComboBox3.Location = New System.Drawing.Point(115, 220)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(175, 21)
         Me.ComboBox3.TabIndex = 9
@@ -415,7 +423,7 @@ Partial Class reservation
         'Label30
         '
         Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(17, 208)
+        Me.Label30.Location = New System.Drawing.Point(17, 192)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(94, 13)
         Me.Label30.TabIndex = 5
@@ -424,7 +432,7 @@ Partial Class reservation
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(17, 167)
+        Me.Label29.Location = New System.Drawing.Point(17, 157)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(90, 13)
         Me.Label29.TabIndex = 4
@@ -433,7 +441,7 @@ Partial Class reservation
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(350, 16)
+        Me.Label28.Location = New System.Drawing.Point(17, 223)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(73, 13)
         Me.Label28.TabIndex = 3
@@ -473,6 +481,38 @@ Partial Class reservation
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.Size = New System.Drawing.Size(1257, 232)
         Me.DataGridView2.TabIndex = 10
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(350, 157)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(72, 13)
+        Me.Label3.TabIndex = 25
+        Me.Label3.Text = "Electricity-IN :"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(350, 192)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(84, 13)
+        Me.Label4.TabIndex = 26
+        Me.Label4.Text = "Electricity-OUT :"
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Location = New System.Drawing.Point(462, 154)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox8.TabIndex = 27
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Location = New System.Drawing.Point(462, 189)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox9.TabIndex = 28
         '
         'reservation
         '
@@ -535,4 +575,8 @@ Partial Class reservation
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
 End Class

@@ -51,7 +51,6 @@ Partial Class invoice
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
-        Me.Label28 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Label31 = New System.Windows.Forms.Label()
@@ -342,16 +341,6 @@ Partial Class invoice
         Me.Label27.TabIndex = 27
         Me.Label27.Text = "Label27"
         '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(334, 470)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(76, 24)
-        Me.Label28.TabIndex = 28
-        Me.Label28.Text = "Label28"
-        '
         'Label29
         '
         Me.Label29.AutoSize = True
@@ -414,7 +403,6 @@ Partial Class invoice
         Me.Controls.Add(Me.Label30)
         Me.Controls.Add(Me.Label31)
         Me.Controls.Add(Me.Label32)
-        Me.Controls.Add(Me.Label28)
         Me.Controls.Add(Me.Label27)
         Me.Controls.Add(Me.Label26)
         Me.Controls.Add(Me.Label25)
@@ -478,7 +466,6 @@ Partial Class invoice
     Friend WithEvents Label15 As Label
     Friend WithEvents Label27 As Label
     Friend WithEvents Label26 As Label
-    Friend WithEvents Label28 As Label
     Friend WithEvents Label29 As Label
     Friend WithEvents Label30 As Label
     Friend WithEvents Label31 As Label

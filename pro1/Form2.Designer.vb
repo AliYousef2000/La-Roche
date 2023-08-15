@@ -65,25 +65,27 @@ Partial Class Form2
         '
         'Button6
         '
+        Me.Button6.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Button6.Location = New System.Drawing.Point(934, 22)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(92, 51)
         Me.Button6.TabIndex = 26
         Me.Button6.Text = "CLIENTS"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.Button6.UseVisualStyleBackColor = False
         '
         'Button3
         '
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Button3.Location = New System.Drawing.Point(834, 22)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(94, 51)
         Me.Button3.TabIndex = 25
         Me.Button3.Text = "ORDERS"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'Button24
         '
-        Me.Button24.BackColor = System.Drawing.Color.LightGray
+        Me.Button24.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Button24.ForeColor = System.Drawing.Color.Black
         Me.Button24.Location = New System.Drawing.Point(734, 22)
         Me.Button24.Name = "Button24"
@@ -94,7 +96,7 @@ Partial Class Form2
         '
         'Button19
         '
-        Me.Button19.BackColor = System.Drawing.Color.LightGray
+        Me.Button19.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Button19.ForeColor = System.Drawing.Color.Black
         Me.Button19.Location = New System.Drawing.Point(630, 22)
         Me.Button19.Name = "Button19"
@@ -130,7 +132,7 @@ Partial Class Form2
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.LightGray
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Button1.ForeColor = System.Drawing.Color.Black
         Me.Button1.Location = New System.Drawing.Point(229, 22)
         Me.Button1.Name = "Button1"
@@ -141,7 +143,7 @@ Partial Class Form2
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.LightGray
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Button2.ForeColor = System.Drawing.Color.Black
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.Button2.Location = New System.Drawing.Point(312, 22)
@@ -154,7 +156,7 @@ Partial Class Form2
         '
         'Button4
         '
-        Me.Button4.BackColor = System.Drawing.Color.LightGray
+        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Button4.ForeColor = System.Drawing.Color.Black
         Me.Button4.Location = New System.Drawing.Point(416, 22)
         Me.Button4.Name = "Button4"
@@ -165,7 +167,7 @@ Partial Class Form2
         '
         'Button5
         '
-        Me.Button5.BackColor = System.Drawing.Color.LightGray
+        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Button5.ForeColor = System.Drawing.Color.Black
         Me.Button5.Location = New System.Drawing.Point(532, 22)
         Me.Button5.Name = "Button5"

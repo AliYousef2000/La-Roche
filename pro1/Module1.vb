@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Module Module1
-    Public str As String = "Data Source=UNKNOWN\SQLEXPRESS;Initial Catalog=rent;Integrated Security=True"
-    'Public str As String = "Data Source=DESKTOP-6UA7K4S\SQLEXPRESS;Initial Catalog=rent;Integrated Security=True"
+    'Public str As String = "Data Source=UNKNOWN\SQLEXPRESS;Initial Catalog=rent;Integrated Security=True"
+    Public str As String = "Data Source=DESKTOP-6UA7K4S\SQLEXPRESS;Initial Catalog=rent;Integrated Security=True"
 
     Public Sub clientswitch(ByVal panel As Form)
         client.Panel1.Controls.Clear()
@@ -59,6 +59,8 @@ Module Module1
         reservation.TextBox18.Text = ""
         reservation.TextBox20.Text = ""
         reservation.TextBox2.Text = ""
+        reservation.TextBox8.Text = ""
+        reservation.TextBox9.Text = 0
         reservation.DateTimePicker1.Value = Date.Today
         reservation.DateTimePicker2.Value = Date.Today
         reservation.ComboBox3.ResetText()
@@ -144,7 +146,7 @@ Module Module1
     Public Sub populatecrdg()
         Try
             Dim con As New SqlConnection(Module1.str)
-            Dim com As New SqlCommand("DECLARE @a AS date = CONVERT(date, GETDATE()) select  reservation_id[ID],app_id[Apartment Id],DATEDIFF(day,checkin_date,checkout_date)[Nights],fname[First Name],lastname[Last Name],CONVERT(VARCHAR, checkin_date, 103) as [Ch-In Date],FORMAT(checkout_date,'dd/MM/yyyy') as [Ch-Out Date],phone[Phone],invoice.price[Price] ,invoice.afterprice[After Discount],invoice.deposite[Deposite],invoice.afterprice - invoice.deposite [Remain] ,invoice.afterprice+invoice.adds_on[Total] from reservation inner join invoice on invoice.rid = reservation.reservation_id where (checkin_date >= @a) or (checkin_date < @a and checkout_date >= @a )", con)
+            Dim com As New SqlCommand("DECLARE @a AS date = CONVERT(date, GETDATE()) select  reservation_id[ID],app_id[Apartment Id],DATEDIFF(day,checkin_date,checkout_date)[Nights],fname[First Name],lastname[Last Name],CONVERT(VARCHAR, checkin_date, 103) as [Ch-In Date],FORMAT(checkout_date,'dd/MM/yyyy') as [Ch-Out Date],phone[Phone],invoice.price[Price] ,invoice.afterprice[After Discount],invoice.deposite[Deposite],invoice.afterprice - invoice.deposite [Remain] ,invoice.afterprice+invoice.adds_on[Total] , elec_in[Electrcity IN],elec_out[Electrcity out] from reservation inner join invoice on invoice.rid = reservation.reservation_id where (checkin_date >= @a) or (checkin_date < @a and checkout_date >= @a )", con)
             Dim da As New SqlDataAdapter(com)
             Dim ds As New DataSet()
             con.Open()
