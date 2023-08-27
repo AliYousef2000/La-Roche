@@ -197,7 +197,6 @@ Public Class cash
                                          ", con)
         com2.Parameters.Add("@b", SqlDbType.VarChar).Value = ComboBox1.SelectedItem
         con.Open()
-        MsgBox(ComboBox1.SelectedItem)
         Dim da As New SqlDataAdapter(com2)
         Dim ds As New DataSet()
         da.Fill(ds, "tabt")
