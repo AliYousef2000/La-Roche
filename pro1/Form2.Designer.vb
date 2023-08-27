@@ -38,8 +38,10 @@ Partial Class Form2
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PrintForm1 = New Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(Me.components)
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.nav.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'nav
@@ -191,6 +193,7 @@ Partial Class Form2
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.IconButton1)
         Me.Panel1.Location = New System.Drawing.Point(0, 115)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1761, 724)
@@ -203,6 +206,21 @@ Partial Class Form2
         Me.PrintForm1.PrintAction = System.Drawing.Printing.PrintAction.PrintToPrinter
         Me.PrintForm1.PrinterSettings = CType(resources.GetObject("PrintForm1.PrinterSettings"), System.Drawing.Printing.PrinterSettings)
         Me.PrintForm1.PrintFileName = Nothing
+        '
+        'IconButton1
+        '
+        Me.IconButton1.BackgroundImage = CType(resources.GetObject("IconButton1.BackgroundImage"), System.Drawing.Image)
+        Me.IconButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.IconButton1.IconColor = System.Drawing.Color.Black
+        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton1.Location = New System.Drawing.Point(445, 90)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Size = New System.Drawing.Size(81, 56)
+        Me.IconButton1.TabIndex = 0
+        Me.IconButton1.Text = "hello"
+        Me.IconButton1.UseVisualStyleBackColor = True
         '
         'Form2
         '
@@ -221,6 +239,7 @@ Partial Class Form2
         Me.Text = "LA ROCHE"
         Me.nav.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -239,4 +258,5 @@ Partial Class Form2
     Friend WithEvents PrintForm1 As PowerPacks.Printing.PrintForm
     Friend WithEvents Button3 As Button
     Friend WithEvents Button6 As Button
+    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
 End Class
